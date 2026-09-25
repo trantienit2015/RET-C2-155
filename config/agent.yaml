@@ -1,0 +1,19 @@
+# Agent Manifest - AgentRegistry static entry point.
+# Root-level keys only; `class` is a single dotted import path.
+# Runtime-tunable parameters live in config/config.yaml, not here.
+
+id: RET-C2-155
+name: Retail Warehouse Physical AI Operations & Exception Handling Q&A Agent
+namespace: ret
+version: 0.1.0
+enabled: true
+description: Warehouse robot exception-code lookup, SOP retrieval, safety warning and escalation Q&A
+class: src.graph.graph.RETC2155WarehouseRobotOpsQA
+category: Cat 2
+industry: RET
+base_type: VectorRAGAgent
+generation_mode: deterministic
+required_trust_level: VERIFIED_EXTERNAL
+requires:
+  secrets: []
+  extras: []
